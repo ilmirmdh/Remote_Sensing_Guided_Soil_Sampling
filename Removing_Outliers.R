@@ -4,7 +4,7 @@ library(MASS)
 library(rcompanion)
 library(nortest)
 
-# REMOVING OUTLIER FOR EACH VARIABLES/PREDICTORS/COVARIATES
+# Removing Outliers for Each Covariates/Variables (Using IQR Method)
 # ELEVATION
 ELEVATION <- quantile(SPECTRAL_FIX_BARE$Elevation, probs=c(.25, .75), na.rm = FALSE)
 IQR <- IQR(SPECTRAL_FIX_BARE$Elevation)
