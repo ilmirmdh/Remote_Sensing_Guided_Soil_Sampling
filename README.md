@@ -2,7 +2,7 @@
 
 - Data preparation: This file contains code for preparing the data for analysis, including cleaning and preprocessing steps.
 
-- Outlier removal: This file contains code for identifying and removing outliers from the data.
+- Outliers removal: This file contains code for identifying and removing outliers from the data.
 
 - Unsupervised sampling selection: This file contains code for selecting soil samples using the K-Means algorithm.
 
