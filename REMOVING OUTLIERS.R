@@ -1,5 +1,10 @@
-# REMOVING OUTLIER EACH COLUMN
+# Load Packages
+library(boot)
+library(MASS)
+library(rcompanion)
+library(nortest)
 
+# REMOVING OUTLIER FOR EACH VARIABLES/PREDICTORS/COVARIATES
 # ELEVATION
 ELEVATION <- quantile(SPECTRAL_FIX_BARE$Elevation, probs=c(.25, .75), na.rm = FALSE)
 IQR <- IQR(SPECTRAL_FIX_BARE$Elevation)
@@ -279,18 +284,12 @@ Upper <- CH[2] + 1.5*IQR
 
 T28 <- subset(T27, T27$CH > Lower & T27$CH < Upper)
 
-# Check
-
-library(boot)
-library(MASS)
-library(rcompanion)
+# Normality Test
 plotNormalHistogram(T28$LST)
 plotNormalHistogram(SPECTRAL_FIX_BARE$LST)
 qqnorm(SPECTRAL_FIX_BARE$LST, pch = 1, frame = FALSE)
 qqline(T17$SLOPE, col = "steelblue", lwd = 2)
 qqnorm(DATA_INPUT_BR$SLOPE, pch = 1, frame = FALSE)
 qqline(DATA_INPUT_BR$SLOPE, col = "steelblue", lwd = 2)
-
-library(nortest)
 ks.test(SPECTRAL_FIX_BARE$NDVI, "pnorm")
 ks.test(T28$NDVI, "pnorm")
