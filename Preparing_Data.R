@@ -1,4 +1,4 @@
-# Removing NaN Data
+# Renaming Column's Name
 names(SPECTRAL_BARE)[names(SPECTRAL_BARE) == "grid_code"] <- "NDVI"
 names(SPECTRAL_BARE)[names(SPECTRAL_BARE) == "MSMMI"] <- "SMI"
 
