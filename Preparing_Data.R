@@ -7,10 +7,8 @@ SAMPLE_BARE <- SPECTRAL_BARE[,-c(1,12,6)]
 
 # Ordering Columns
 col_order <- c("Elevation", "SLOPE", "ASPECT", "CTI", "TPI", "VDEPTH", "TRI", "LSFactor",
-               "LAI", "NDVI", "CARI", "NDBI", "BSI",
-               "CFaktor", "SCRI", "SMI", "SBR", "CI", "NISI", "NDTI", "NBR",
-               "FOX", "FRI", "FRO", "GOS", "LAT",
-               "LST", "CH",
+               "LAI", "NDVI", "CARI", "NDBI", "BSI", "CFaktor", "SCRI", "SMI", "SBR", "CI", 
+               "NISI", "NDTI", "NBR", "FOX", "FRI", "FRO", "GOS", "LAT", "LST", "CH",
                "POINT_X", "POINT_Y")
 DATA_BARE <- SAMPLE_BARE[, col_order]
 
