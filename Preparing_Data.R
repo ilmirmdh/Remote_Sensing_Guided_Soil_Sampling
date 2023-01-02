@@ -16,10 +16,10 @@ DATA_BARE <- SAMPLE_BARE[, col_order]
 
 # Removing Unique Value (-9999)
 SPECTRAL_SAMPLE_BARE <- DATA_BARE[!(DATA_BARE$CARI=="-9999"|
-                                      DATA_BARE$CTI=="-9999"|
-                                      DATA_BARE$SLOPE=="-9999"|
-                                      DATA_BARE$ASPECT=="-9999"|
-                                      DATA_BARE$TPI=="-9999"),]
+                                    DATA_BARE$CTI=="-9999"|
+                                    DATA_BARE$SLOPE=="-9999"|
+                                    DATA_BARE$ASPECT=="-9999"|
+                                    DATA_BARE$TPI=="-9999"),]
 
 # Selecting Rows That Have No Missing Value
 SPECTRAL_DATA_BARE <- SPECTRAL_SAMPLE_BARE[complete.cases(SPECTRAL_SAMPLE_BARE),]
